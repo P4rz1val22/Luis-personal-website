@@ -1,0 +1,46 @@
+.navBarButton {
+    color: white;
+    font-family: Futura, sans-serif;
+    width: 25%;
+    font-size: 4vw;
+    text-align: center;
+    height: 6vw;
+    margin: auto;
+    padding-top: 1vw;
+    transition: .2s ease-in-out;
+    cursor: pointer
+}
+
+.navBarButton:hover {
+    background-color: #F1AE45;
+    border-radius: 0 0 10px 10px;
+    height: 8vw;
+    text-shadow: .2vw 0px #765e0e;
+}
+
+.navBar {
+    display: flex;
+    background-color: #1E1E1E;
+    width: auto;
+    height: 7vw;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.circle {
+    background-color: #E15121;
+    margin: 1%;
+    width: 17%;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    margin-top: -10%;
+    margin-bottom: -10%;
+    padding: -10%;
+    transition: .2s ease-in-out;
+    cursor: pointer;
+}
+
+.circle:hover {
+    width: 19%;
+}

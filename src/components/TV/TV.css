@@ -1,0 +1,8 @@
+.tv {
+    background-color: #E46D45;
+    width: 100%;
+    aspect-ratio: 2 / 1;
+    border-radius: 0 0 5vw 5vw;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    padding: -10%;
+}
