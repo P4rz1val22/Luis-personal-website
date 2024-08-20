@@ -1,14 +1,27 @@
 import './App.css';
 import Navbar from './components/NavbarComp/Navbar';
-import Tv from './components/TV/TV';
-import React from "react"
+import Home from './pages/Home';
+import Work from './pages/Work';
+import Skills from './pages/Skills';
+import Projects from './pages/Projects';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+
 
 function App() {
   return (
-    <div className="App">
-      <Navbar />
-      <Tv />
-    </div>
+    <Router>
+      <div className="App">
+        <Navbar />
+        <div className="content">
+          <Routes>
+            <Route exact path="/" element={<Home />} />
+            <Route exact path="/work" element={<Work />} />
+            <Route exact path="/skills" element={<Skills />} />
+            <Route exact path="/projects" element={<Projects />} />
+          </Routes>
+        </div>
+      </div>
+    </Router>
   );
 }
 
