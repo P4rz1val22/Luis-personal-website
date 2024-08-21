@@ -1,5 +1,5 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Futura Std', sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -70,11 +70,19 @@ button:focus-visible {
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Futura Std', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Apply the Futura Std font to specific elements */
+h3,
+h2,
+.title,
+b {
+  font-family: 'Futura Std', sans-serif;
+  font-weight: 400;
+  /* Adjust weight if available */
 }
 
 code {

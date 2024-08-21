@@ -1,0 +1,83 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.title {
+    font-size: 6vw;
+    font-family: futura, medium;
+    color: black;
+}
+
+.blueLines {
+    background-color: #40456B;
+    width: 20vw;
+    height: 2vw;
+    border-radius: 0 2vw 2vw 0;
+    box-shadow: none;
+    position: relative;
+    margin-top: 2vw;
+}
+
+.blueLines::before {
+    content: '';
+    background-color: #40456B;
+    width: 25vw;
+    height: 2vw;
+    border-radius: 0 2vw 2vw 0;
+    position: absolute;
+    top: 3.7vw;
+    transform: translate(-40%, -50%);
+    box-shadow: none;
+}
+
+.blueLines::after {
+    content: '';
+    background-color: #40456B;
+    width: 20vw;
+    height: 2vw;
+    border-radius: 0 2vw 2vw 0;
+    position: absolute;
+    top: 6.4vw;
+    transform: translate(-50%, -50%);
+    box-shadow: none;
+}
+
+.heading {
+    margin-bottom: 5vw;
+    margin-top: 3vw;
+}
+
+.imgSection {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.Container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: 0px;
+}
+
+.textBox {
+    font-size: 2vw;
+    font-family: 'Futura Std', sans-serif;
+    padding: 5vw;
+    width: 100%;
+    text-align: left;
+    color: black;
+}
+
+.textBox b {
+    font-weight: 600;
+}
+
+.box {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background-color: #E15121;
+}
