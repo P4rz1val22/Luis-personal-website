@@ -6,7 +6,12 @@ const Tv = () => {
         <div>
             <div className='tv'>
                 <div className='screen'>LUIS&nbsp; <br /> SARMIENTO</div>
-                <div className='screenButton' />
+                <div className='hozContainer'>
+                    <div className='lines Left' />
+                    <div className='screenButton' />
+                    <div className='lines Right' />
+                </div>
+
             </div>
             <h1>
                 hello!
