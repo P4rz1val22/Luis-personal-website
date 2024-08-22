@@ -1,0 +1,172 @@
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vw;
+    flex-direction: column;
+    background-color: #F1AE45;
+    justify-content: top;
+    align-items: center;
+}
+
+.printerButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+    padding: 3vw;
+    margin: 1vw;
+    height: 10vw;
+    max-height: 10vw;
+}
+
+.arrows {
+    display: flex;
+    flex-direction: row;
+    margin-left: -13vw;
+}
+
+.arrow {
+    --r: 0.7vw;
+    width: 7vw;
+    top: 0px;
+    aspect-ratio: 1/cos(30deg);
+    --_g: calc(tan(60deg)*var(--r)) bottom var(--r), red 98%, #0000 101%;
+    -webkit-mask:
+        conic-gradient(from -30deg at 50% calc(200% - 3*var(--r)/2), #000 60deg, #0000 0) 0 100%/100% calc(100% - 3*var(--r)/2) no-repeat,
+        radial-gradient(var(--r) at 50% calc(2*var(--r)), #000 98%, #0000 101%),
+        radial-gradient(var(--r) at left var(--_g)),
+        radial-gradient(var(--r) at right var(--_g));
+    clip-path: polygon(50% 0, 100% 100%, 0 100%);
+    background: #1E1E1E;
+    transform: rotate(30deg);
+    cursor: pointer;
+    position: relative;
+    transition: ease-in 0.1s;
+}
+
+.LeftShadow {
+    background-color: rgb(113, 82, 4);
+    cursor: default;
+    left: 7vw;
+    top: 0.6vw;
+}
+
+.RightShadow {
+    background-color: rgb(113, 82, 4);
+    cursor: default;
+    left: 12vw;
+    top: 0.6vw;
+}
+
+.arrow:hover {
+    top: 0.6vw;
+}
+
+.LeftShadow:hover {
+    top: 0.6vw;
+}
+
+.Opposite {
+    transform: rotate(-30deg);
+    margin-right: 5vw
+}
+
+.printButton {
+    background-color: transparent;
+    border: 1vw solid #84B3A7;
+    width: 8vw;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    margin: 1vw;
+    position: relative;
+    box-shadow: 0 0.6vw 0 #66968A;
+    cursor: pointer;
+    transition: ease-in-out 0.1s;
+}
+
+.printButton::before {
+    content: '';
+    width: 6vw;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    background-color: #84B3A7;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0.6vw 0 #66968A;
+    transition: ease-in-out 0.1s;
+}
+
+.printButton:hover {
+    margin-top: 2vw;
+    box-shadow: 0 0 0 #66968A;
+}
+
+.printButton:hover::before {
+    box-shadow: 0 0 0 #66968A;
+}
+
+.printerScreen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: futura, medium;
+    font-size: 13vw;
+    line-height: 13vw;
+    color: white;
+    text-shadow: .5vw 0px #0f1810;
+    background: repeating-linear-gradient(-45deg,
+            #162617,
+            #162617 10px,
+            #233825 10px,
+            #233825 20px);
+    width: 95%;
+    height: 40vw;
+    border-radius: 1vw;
+    padding-right: 2vw;
+    box-shadow: inset 0.5vw 0.5vw 0 1vw #0f1810;
+
+
+}
+
+.typedText {
+    overflow: hidden;
+    /* Ensures the content is not revealed until the animation */
+    border-right: .1em solid white;
+    /* The typwriter cursor */
+    white-space: nowrap;
+    /* Keeps the content on a single line */
+    margin: 0 auto;
+    /* Adjust as needed */
+    animation:
+        typing 2s steps(10, end),
+        blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: white;
+    }
+}
+
+.printerPaper {}

@@ -1,4 +1,5 @@
 import Tv from "../components/TV/TV"
+import Printer from "../components/Printer/Printer.jsx"
 import './Pages.css';
 
 const Home = () => {
@@ -35,6 +36,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>
+            <Printer />
         </div>
     );
 }
