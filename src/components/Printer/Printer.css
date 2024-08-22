@@ -3,7 +3,7 @@
     width: 100%;
     height: 100vw;
     flex-direction: column;
-    background-color: #F1AE45;
+    background-color: #f38579;
     justify-content: top;
     align-items: center;
 }
@@ -45,14 +45,14 @@
 }
 
 .LeftShadow {
-    background-color: rgb(113, 82, 4);
+    background-color: #78413a;
     cursor: default;
     left: 7vw;
     top: 0.6vw;
 }
 
 .RightShadow {
-    background-color: rgb(113, 82, 4);
+    background-color: #78413a;
     cursor: default;
     left: 12vw;
     top: 0.6vw;
@@ -170,4 +170,27 @@
     }
 }
 
-.printerPaper {}
+.printerPaper {
+    width: 80%;
+    height: 2vw;
+    margin-top: 2vw;
+    background-color: black;
+    position: relative;
+    z-index: 1;
+}
+
+.printerPaper::before {
+    content: "";
+    position: absolute;
+    top: 1vw;
+    left: +2vw;
+    width: calc(100% - 4vw);
+    height: 3vw;
+    background-color: white;
+    transition: ease-in-out 0.5s;
+}
+
+
+.printerPaper:hover::before {
+    height: 20vw;
+}

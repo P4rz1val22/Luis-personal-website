@@ -5,15 +5,20 @@ import { useState } from 'react';
 const Printer = () => {
 
     const texts = [
-        'First text',
-        'Second text',
-        'Third text'
+        'Resume',
+        'L.O.R. #1',
+        'L.O.R. #2'
     ];
 
-    // State to keep track of the current index
+    const links = [
+        'src/assets/Resume.pdf',
+        'src/assets/LOR1.pdf',
+        'src/assets/LOR2.pdf'
+    ];
+
     const [currentIndex, setCurrentIndex] = useState(0);
 
-    const handleClick = (amount) => {
+    const handleClick = (amount, address) => {
         let nextIndex = currentIndex + amount;
         console.log(currentIndex)
 
@@ -42,7 +47,7 @@ const Printer = () => {
                     <div onClick={() => handleClick(1)} className='arrow Opposite' />
 
                 </div>
-                <div className='printButton' />
+                <a href={links[currentIndex]} target="_blank" className='printButton' />
             </div>
             <div className='printerScreen' >
                 <div className='typedText'>
