@@ -1,21 +1,20 @@
 import Tv from "../components/TV/TV"
 import Printer from "../components/Printer/Printer.jsx"
+import Intercom from "../components/Intercom/Intercom.jsx"
 import './Pages.css';
 
 const Home = () => {
     return (
         <div>
-            <div className="scroll-watcher" />
             <Tv />
-            <br />
-            <div className="hozContainer heading">
-                <div className='sideLines Left Blue' />
+            <div className="hozContainer heading bottom">
+                <div className='sideLines Blue' />
                 <div className='hiddenElement title'> ABOUT ME</div>
-                <div className='sideLines Right Blue' />
+                <div className='sideLines Reverse Blue' />
             </div>
             <div className="imgSection">
                 <div className="Container">
-                    <div className="textBox">
+                    <div className="textBox left">
                         <h2>Hello there!</h2> My name is <b>Luis Enrique Sarmiento</b>, a Computer Science student at Northeastern University, currently based in Boston, MA.
                         Originally from Venezuela and completing my studies in Panama, my unique journey has been fueled by a
                         passion for tech, problem-solving, and innovation.
@@ -23,11 +22,11 @@ const Home = () => {
                         Since I was young, I became entranced with the impact technology had in the world, and became fascinated with its ability
                         to bring forth social change and improve the lives of others.
                     </div>
-                    <div className="box" />
+                    <div className="box right" />
                 </div>
                 <div className="Container">
-                    <div className="box" />
-                    <div className="textBox">
+                    <div className="box left" />
+                    <div className="textBox right">
                         I'm dedicated to using my skills to create tangible, positive change. Whether it's through coding, leading or collaborating
                         with others, I'm determined to push the boundaries of innovation and create sustainable,
                         ethical solutions to the problems of today and tomorrow.
@@ -41,10 +40,11 @@ const Home = () => {
             <div className="hozContainer heading">
                 <div className='sideLines Left Pink' />
                 <div className='title'> DOCUMENTS</div>
-                <div className='sideLines Right Pink' />
+                <div className='sideLines Reverse Pink' />
             </div>
             <Printer />
             <div className='contactSection'>
+                <Intercom />
             </div>
         </div>
     );

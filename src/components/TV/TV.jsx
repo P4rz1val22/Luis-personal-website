@@ -7,9 +7,9 @@ const Tv = () => {
             <div className='tv'>
                 <div className='screen'>LUIS&nbsp; <br /> SARMIENTO</div>
                 <div className='hozContainer'>
-                    <div className='lines Left' />
+                    <div className='lines' />
                     <div className='screenButton' />
-                    <div className='lines Right' />
+                    <div className='lines Reverse' />
                 </div>
 
             </div>

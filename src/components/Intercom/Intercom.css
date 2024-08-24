@@ -1,0 +1,85 @@
+.intercom {
+    display: flex;
+    flex-direction: horizontal;
+    justify-content: center;
+    align-items: center;
+}
+
+.intercom-box {
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+    height: 40vw;
+    margin: 10vw;
+    background-color: #312A20;
+    box-shadow: 0 -3vw #453e34;
+    border-radius: 4vw;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 2;
+}
+
+
+.intercom-speaker {
+    display: flex;
+    flex-direction: horizontal;
+}
+
+.intercom-grate {
+    width: 2vw;
+    margin: 0.5vw;
+    margin-top: 2vw;
+    background-color: #221B0F;
+    box-shadow: inset 1vw 1vw black;
+    border-radius: 4vw;
+}
+
+.intercom-button {
+    background-color: transparent;
+    border: 1vw solid #C2C2C2;
+    width: 6vw;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    margin: 1vw;
+    position: relative;
+    box-shadow: 0 0.4vw 0 #767676;
+    cursor: pointer;
+    transition: ease-in-out 0.1s;
+}
+
+.intercom-button::before {
+    content: '';
+    width: 5vw;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    background-color: #C2C2C2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0.4vw 0 #767676;
+    transition: ease-in-out 0.1s;
+}
+
+.intercom-button:hover {
+    box-shadow: 0 0.2vw 0 #767676;
+    transform: translateY(0.2vw);
+    /* Move down on hover */
+}
+
+.intercom-button:hover::before {
+    box-shadow: 0 0.2vw 0 #767676;
+}
+
+.intercom-wheel {
+    height: 15vw;
+    aspect-ratio: 1 / 1;
+    background-color: rgb(104, 64, 31);
+    border-radius: 15vw;
+    transform: translate(-20vw, -5vw);
+    border-width: 1vw;
+    border-color: rgb(126, 80, 43);
+    border-style: dashed;
+    box-shadow: 0 -0.5vw rgb(86, 55, 30);
+    cursor: pointer;
+}

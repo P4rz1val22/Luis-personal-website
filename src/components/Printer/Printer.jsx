@@ -23,7 +23,7 @@ const Printer = () => {
     // State to control whether hover is enabled
     const [isHoverEnabled, setIsHoverEnabled] = useState(true);
 
-    const handleClick = (amount, address) => {
+    const handleClick = (amount) => {
         let nextIndex = currentIndex + amount;
         console.log(currentIndex)
 
@@ -80,7 +80,7 @@ const Printer = () => {
                     <div onClick={() => handleClick(1)} className={`arrow Opposite ${!isHoverEnabled ? 'noHover' : ''}`} />
 
                 </div>
-                <a onClick={() => handleClick(0)} k href={links[currentIndex]} target="_blank" rel="noopener noreferrer" className='printButton' />
+                <a onClick={() => handleClick(0)} href={links[currentIndex]} target="_blank" rel="noopener noreferrer" className='printButton' />
                 <audio ref={audioRef} src="src/assets/ClickSound.mov" />
             </div>
             <div className='printerScreen' >
