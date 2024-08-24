@@ -1,13 +1,15 @@
 import './Printer.css';
 import React from "react";
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 
 const Printer = () => {
 
+    const audioRef = useRef(null); // Create a reference to the audio element
+
     const texts = [
         'Resume',
-        'L.O.R. #1',
-        'L.O.R. #2'
+        'L. of Rec #1',
+        'L. of Rec #2'
     ];
 
     const links = [
@@ -17,6 +19,9 @@ const Printer = () => {
     ];
 
     const [currentIndex, setCurrentIndex] = useState(0);
+
+    // State to control whether hover is enabled
+    const [isHoverEnabled, setIsHoverEnabled] = useState(true);
 
     const handleClick = (amount, address) => {
         let nextIndex = currentIndex + amount;
@@ -32,7 +37,35 @@ const Printer = () => {
             nextIndex = texts.length - 1;
         }
 
+        if (audioRef.current) {
+            audioRef.current.play();
+        }
+
         setCurrentIndex(nextIndex);
+        setIsHoverEnabled(false);
+        setTimeout(() => {
+            setIsHoverEnabled(true);
+        }, 100);
+    };
+
+    const [canPlay, setCanPlay] = useState(true);
+
+    const handleMouseEnter = () => {
+
+        if (canPlay) {
+            const audio = new Audio('src/assets/Printer.mov');
+            audio.volume = 0.6; // Set the volume to 50%
+            audio.play();
+
+            setCanPlay(false); // Prevent further playback
+            setTimeout(() => {
+                setCanPlay(true); // Allow playback after 1 second (1000ms)
+            }, 1000);
+        }
+    };
+
+    const handleMouseLeave = () => {
+
     };
 
     return (
@@ -40,14 +73,15 @@ const Printer = () => {
             <div className='printerButtons'>
                 <div className='arrows'>
                     <div className='arrow LeftShadow' />
-                    <div onClick={() => handleClick(-1)} className='arrow Left' />
+                    <div onClick={() => handleClick(-1)} className={`arrow Left ${!isHoverEnabled ? 'noHover' : ''}`} />
                 </div>
                 <div className='arrows'>
-                    <div id="clickableDiv" className='arrow RightShadow Opposite' />
-                    <div onClick={() => handleClick(1)} className='arrow Opposite' />
+                    <div id="clickableDiv" className='arrow RightShadow Opposite ' />
+                    <div onClick={() => handleClick(1)} className={`arrow Opposite ${!isHoverEnabled ? 'noHover' : ''}`} />
 
                 </div>
-                <a href={links[currentIndex]} target="_blank" className='printButton' />
+                <a onClick={() => handleClick(0)} k href={links[currentIndex]} target="_blank" rel="noopener noreferrer" className='printButton' />
+                <audio ref={audioRef} src="src/assets/ClickSound.mov" />
             </div>
             <div className='printerScreen' >
                 <div className='typedText'>
@@ -55,7 +89,8 @@ const Printer = () => {
                 </div>
             </div>
             <div className='printerOutput' />
-            <div className='printerPaper' />
+            <a onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className='printerPaper' target="_blank" rel="noopener noreferrer" href={links[currentIndex]} />
+
         </div>
     );
 }

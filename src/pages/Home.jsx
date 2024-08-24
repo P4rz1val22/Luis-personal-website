@@ -5,11 +5,13 @@ import './Pages.css';
 const Home = () => {
     return (
         <div>
+            <div className="scroll-watcher" />
             <Tv />
+            <br />
             <div className="hozContainer heading">
-                <div className='blueLines Left' />
-                <div className='title'> ABOUT ME</div>
-                <div className='blueLines Right' />
+                <div className='sideLines Left Blue' />
+                <div className='hiddenElement title'> ABOUT ME</div>
+                <div className='sideLines Right Blue' />
             </div>
             <div className="imgSection">
                 <div className="Container">
@@ -36,7 +38,14 @@ const Home = () => {
                     </div>
                 </div>
             </div>
+            <div className="hozContainer heading">
+                <div className='sideLines Left Pink' />
+                <div className='title'> DOCUMENTS</div>
+                <div className='sideLines Right Pink' />
+            </div>
             <Printer />
+            <div className='contactSection'>
+            </div>
         </div>
     );
 }

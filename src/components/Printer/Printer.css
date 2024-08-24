@@ -1,22 +1,33 @@
 .container {
     display: flex;
     width: 100%;
-    height: 100vw;
+    height: 50vw;
     flex-direction: column;
     background-color: #f38579;
     justify-content: top;
     align-items: center;
+    border-radius: 3vw;
+    margin-top: 4vw;
+    box-shadow: 0 -3vw #ffa49a;
 }
 
 .printerButtons {
     display: flex;
     flex-direction: row;
-    justify-content: right;
+    justify-content: center;
     align-items: center;
     padding: 3vw;
-    margin: 1vw;
-    height: 10vw;
+    margin: 2vw;
+    height: 8vw;
+    width: 50%;
     max-height: 10vw;
+    border-radius: 2vw;
+    background: repeating-linear-gradient(-45deg,
+            #ce6868,
+            #ce6868 10px,
+            #c85f5f 10px,
+            #c85f5f 20px);
+    box-shadow: inset 0.5vw 0.5vw 0 0.5vw #832d2d;
 }
 
 .arrows {
@@ -27,7 +38,7 @@
 
 .arrow {
     --r: 0.7vw;
-    width: 7vw;
+    width: 9vw;
     top: 0px;
     aspect-ratio: 1/cos(30deg);
     --_g: calc(tan(60deg)*var(--r)) bottom var(--r), red 98%, #0000 101%;
@@ -37,32 +48,41 @@
         radial-gradient(var(--r) at left var(--_g)),
         radial-gradient(var(--r) at right var(--_g));
     clip-path: polygon(50% 0, 100% 100%, 0 100%);
-    background: #1E1E1E;
+    background: #ffee82;
     transform: rotate(30deg);
     cursor: pointer;
     position: relative;
     transition: ease-in 0.1s;
+    margin-top: -1vw;
 }
 
 .LeftShadow {
-    background-color: #78413a;
+    background-color: #a59946;
     cursor: default;
-    left: 7vw;
+    left: 9vw;
     top: 0.6vw;
 }
 
 .RightShadow {
-    background-color: #78413a;
+    background-color: #a59946;
     cursor: default;
-    left: 12vw;
+    left: 14vw;
     top: 0.6vw;
 }
 
 .arrow:hover {
-    top: 0.6vw;
+    top: 0.3vw;
 }
 
 .LeftShadow:hover {
+    top: 0.6vw;
+}
+
+.RightShadow:hover {
+    top: 0.6vw;
+}
+
+.noHover:hover {
     top: 0.6vw;
 }
 
@@ -78,6 +98,7 @@
     aspect-ratio: 1 / 1;
     border-radius: 50%;
     margin: 1vw;
+    left: 4vw;
     position: relative;
     box-shadow: 0 0.6vw 0 #66968A;
     cursor: pointer;
@@ -99,12 +120,12 @@
 }
 
 .printButton:hover {
-    margin-top: 2vw;
-    box-shadow: 0 0 0 #66968A;
+    margin-top: 1.5vw;
+    box-shadow: 0 0.3vw 0 #66968A;
 }
 
 .printButton:hover::before {
-    box-shadow: 0 0 0 #66968A;
+    box-shadow: 0 0.3vw 0 #66968A;
 }
 
 .printerScreen {
@@ -123,7 +144,7 @@
             #233825 10px,
             #233825 20px);
     width: 95%;
-    height: 40vw;
+    height: 20vw;
     border-radius: 1vw;
     padding-right: 2vw;
     box-shadow: inset 0.5vw 0.5vw 0 1vw #0f1810;
@@ -187,7 +208,7 @@
     width: calc(100% - 4vw);
     height: 3vw;
     background-color: white;
-    transition: ease-in-out 0.5s;
+    transition: ease-in-out 0.3s;
 }
 
 
