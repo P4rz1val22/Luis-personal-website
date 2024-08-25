@@ -43,9 +43,14 @@ const Home = () => {
                 <div className='sideLines Reverse Pink' />
             </div>
             <Printer />
-            <div className='contactSection'>
-                <Intercom />
+
+            <div className="hozContainer heading">
+                <div className='sideLines yellow' />
+                <div className='title'> CONTACT ME</div>
+                <div className='sideLines Reverse yellow' />
             </div>
+            <Intercom />
+            <br />
         </div>
     );
 }

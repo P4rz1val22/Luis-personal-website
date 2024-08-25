@@ -13,9 +13,9 @@ const Printer = () => {
     ];
 
     const links = [
-        'src/assets/Resume.pdf',
-        'src/assets/LOR1.pdf',
-        'src/assets/LOR2.pdf'
+        'src/assets/PDFs/Resume.pdf',
+        'src/assets/PDFs/LOR1.pdf',
+        'src/assets/PDFs/LOR2.pdf'
     ];
 
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -53,7 +53,7 @@ const Printer = () => {
     const handleMouseEnter = () => {
 
         if (canPlay) {
-            const audio = new Audio('src/assets/Printer.mov');
+            const audio = new Audio('src/assets/Sounds/Printer.mov');
             audio.volume = 0.6; // Set the volume to 50%
             audio.play();
 
@@ -81,7 +81,7 @@ const Printer = () => {
 
                 </div>
                 <a onClick={() => handleClick(0)} href={links[currentIndex]} target="_blank" rel="noopener noreferrer" className='printButton' />
-                <audio ref={audioRef} src="src/assets/ClickSound.mov" />
+                <audio ref={audioRef} src="src/assets/Sounds/ClickSound.mov" />
             </div>
             <div className='printerScreen' >
                 <div className='typedText'>

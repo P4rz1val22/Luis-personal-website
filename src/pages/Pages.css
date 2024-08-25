@@ -126,21 +126,13 @@ html {
     }
 }
 
-/* .scroll-watcher {
-    height: 1vw;
-    position: fixed;
-    top: 0;
-    z-index: 1000;
-    background-color: #84B3A7;
-    width: 100%;
-    scale: 0 1;
-    transform-origin: left;
-    animation: scroll-watcher linear;
-    animation-timeline: scroll();
+.contactSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
-@keyframes scroll-watcher {
-    to {
-        scale: 1 1;
-    }
-} */
+.yellow {
+    background-color: #e1a121;
+}
