@@ -6,6 +6,7 @@ const Intercom = () => {
 
     const [currentIndex, setCurrentIndex] = useState(0);
     const audioRef = useRef(null); // Create a reference to the audio element
+    const audioRef2 = useRef(null); // Create a reference to the audio element
 
     const links = [
         'https://github.com/P4rz1val22',
@@ -27,8 +28,13 @@ const Intercom = () => {
             nextIndex = links.length - 1;
         }
 
-        if (audioRef.current) {
-            audioRef.current.play();
+        if (amount == 0) {
+            if (audioRef.current) {
+                audioRef.current.play();
+            }
+        }
+        else if (audioRef2.current) {
+            audioRef2.current.play();
         }
 
         if (amount != 0) {
@@ -64,7 +70,10 @@ const Intercom = () => {
                     <img className='wheel-icon left-icon' src='src/assets/Images/Mail-Icon.png' />
                     <img className='wheel-icon right-icon' src='src/assets/Images/Form-Icon.png' />
                 </div>
+                <audio ref={audioRef2} src="src/assets/Sounds/WheelSound.mov" />
             </div>
+            <div className='click-me-arrow'></div>
+            <div className='click-me-title'>Click!</div>
         </div>
     );
 }

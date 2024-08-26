@@ -3,12 +3,15 @@
     width: 100%;
     height: 50vw;
     flex-direction: column;
-    background-color: #f38579;
+    background-color: light-dark(#f38579, #953126);
+    ;
+
     justify-content: top;
     align-items: center;
     border-radius: 3vw;
     margin-top: 4vw;
-    box-shadow: 0 -3vw #ffa49a;
+    box-shadow: 0 -3vw light-dark(#ffa49a, #b74336);
+    ;
 }
 
 .printerButtons {
@@ -23,11 +26,11 @@
     max-height: 10vw;
     border-radius: 2vw;
     background: repeating-linear-gradient(-45deg,
-            #ce6868,
-            #ce6868 10px,
-            #c85f5f 10px,
-            #c85f5f 20px);
-    box-shadow: inset 0.5vw 0.5vw 0 0.5vw #832d2d;
+            light-dark(#ce6868, #68231c),
+            light-dark(#ce6868, #68231c) 10px,
+            light-dark(#c85f5f, #8a3128) 10px,
+            light-dark(#c85f5f, #8a3128) 20px);
+    box-shadow: inset 0.5vw 0.5vw 0 0.5vw light-dark(#832d2d, #411511);
 }
 
 .arrows {
@@ -213,5 +216,5 @@
 
 
 .printerPaper:hover::before {
-    height: 20vw;
+    height: 12vw;
 }

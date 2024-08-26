@@ -51,6 +51,8 @@ const Home = () => {
             </div>
             <Intercom />
             <br />
+
+
         </div>
     );
 }

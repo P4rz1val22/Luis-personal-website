@@ -8,7 +8,7 @@ html {
 .title {
     font-size: 6vw;
     font-family: futura, medium;
-    color: black;
+    color: light-dark(black, white);
 }
 
 .sideLines {
@@ -77,7 +77,7 @@ html {
     padding: 5vw;
     width: 100%;
     text-align: left;
-    color: black;
+    color: light-dark(black, white);
 }
 
 .textBox b {

@@ -20,7 +20,6 @@ const Printer = () => {
 
     const [currentIndex, setCurrentIndex] = useState(0);
 
-    // State to control whether hover is enabled
     const [isHoverEnabled, setIsHoverEnabled] = useState(true);
 
     const handleClick = (amount) => {

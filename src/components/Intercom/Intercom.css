@@ -151,3 +151,17 @@
     bottom: 6vw;
     left: 0;
 }
+
+.click-me-arrow {
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 20px solid black;
+    transform: translate(-10vw, 0) scale(2);
+}
+
+.click-me-title {
+    transform: translate(-8vw, 0);
+    font-size: 3vw;
+    font-family: futura, medium;
+    color: black;
+}
