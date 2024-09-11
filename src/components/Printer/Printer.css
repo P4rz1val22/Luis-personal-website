@@ -1,4 +1,4 @@
-.container {
+.printer-container {
     display: flex;
     width: 100%;
     height: 50vw;
@@ -14,7 +14,7 @@
     ;
 }
 
-.printerButtons {
+.printer-buttons {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -59,14 +59,14 @@
     margin-top: -1vw;
 }
 
-.LeftShadow {
+.left-shadow {
     background-color: #a59946;
     cursor: default;
     left: 9vw;
     top: 0.6vw;
 }
 
-.RightShadow {
+.right-shadow {
     background-color: #a59946;
     cursor: default;
     left: 14vw;
@@ -77,24 +77,24 @@
     top: 0.3vw;
 }
 
-.LeftShadow:hover {
+.left-shadow:hover {
     top: 0.6vw;
 }
 
-.RightShadow:hover {
+.right-shadow:hover {
     top: 0.6vw;
 }
 
-.noHover:hover {
+.no-hover:hover {
     top: 0.6vw;
 }
 
-.Opposite {
+.opposite {
     transform: rotate(-30deg);
     margin-right: 5vw
 }
 
-.printButton {
+.print-button {
     background-color: transparent;
     border: 1vw solid #84B3A7;
     width: 8vw;
@@ -108,7 +108,7 @@
     transition: ease-in-out 0.1s;
 }
 
-.printButton::before {
+.print-button::before {
     content: '';
     width: 6vw;
     aspect-ratio: 1 / 1;
@@ -122,12 +122,12 @@
     transition: ease-in-out 0.1s;
 }
 
-.printButton:hover {
+.print-button:hover {
     margin-top: 1.5vw;
     box-shadow: 0 0.3vw 0 #66968A;
 }
 
-.printButton:hover::before {
+.print-button:hover::before {
     box-shadow: 0 0.3vw 0 #66968A;
 }
 
@@ -154,7 +154,7 @@
 
 }
 
-.typedText {
+.typed-text {
     overflow: hidden;
     /* Ensures the content is not revealed until the animation */
     border-right: .1em solid white;
@@ -194,7 +194,7 @@
     }
 }
 
-.printerPaper {
+.printer-paper {
     width: 80%;
     height: 2vw;
     margin-top: 2vw;
@@ -203,7 +203,7 @@
     z-index: 1;
 }
 
-.printerPaper::before {
+.printer-paper::before {
     content: "";
     position: absolute;
     top: 1vw;
@@ -215,6 +215,6 @@
 }
 
 
-.printerPaper:hover::before {
+.printer-paper:hover::before {
     height: 12vw;
 }

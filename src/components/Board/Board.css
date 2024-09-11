@@ -1,0 +1,48 @@
+.board {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 80vw;
+    height: 40vw;
+    margin-top: 2vw;
+    margin-bottom: 5vw;
+    background-color: #7697a0;
+    border: solid #173b61 1vw;
+    border-radius: 3vw;
+    align-items: center;
+    position: relative;
+    transition: .3s ease-out;
+    box-shadow: inset .5vw .5vw #0f1e2e;
+}
+
+.note {
+    position: relative;
+    width: 24vw;
+    aspect-ratio: 1 / 1;
+    background-color: white;
+    margin: 1vw;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: futura;
+    transition-delay: 1s;
+}
+
+.first {
+    background-color: rgb(232, 157, 157);
+    top: 5vw;
+    transform: rotate(3deg);
+}
+
+.second {
+    top: -5vw;
+    background-color: rgb(169, 207, 194);
+    transform: rotate(-3deg);
+}
+
+.third {
+    top: 3vw;
+    background-color: rgb(225, 226, 147);
+    transform: rotate(1deg);
+}

@@ -1,0 +1,76 @@
+.punch-clock-container {
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: end;
+    display: flex;
+    flex-direction: row;
+    transition: .5s ease-in-out;
+    margin: 0;
+}
+
+.punch-clock {
+    display: flex;
+    width: 25vw;
+    height: 30vw;
+    background-color: #7697a0;
+    border: solid .3vw #17616e;
+    box-shadow: 0 -2vw 0 #17616e;
+    border-radius: 4vw;
+    justify-content: center;
+    align-items: end;
+    position: relative;
+
+}
+
+.punch-clock::before {
+    content: '';
+    width: 15vw;
+    aspect-ratio: 1 / 1;
+    background-color: white;
+    border: solid 0.3vw #17616e;
+    border-radius: 50%;
+    position: absolute;
+    top: 1vw;
+}
+
+.punch-clock:after {
+    content: '';
+    width: 0.5vw;
+    aspect-ratio: 1 / 1;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    top: 9vw;
+
+}
+
+
+.hand {
+    position: absolute;
+    width: 6vw;
+    top: 9.2vw;
+    left: 6.5vw;
+    height: 0.2vw;
+    background-color: black;
+    transform-origin: 100%;
+    transform: rotate(90deg);
+    border-radius: 0.5vw;
+}
+
+.minute-hand {
+    background-color: gray;
+}
+
+.second-hand {
+    background-color: #fd8916;
+}
+
+.dot {
+    width: 8vw;
+    height: 4vw;
+    top: -8vw;
+    background-color: #17616e;
+    position: relative;
+    border-radius: 1vw;
+    box-shadow: inset .5vw .5vw #0f3f48;
+}

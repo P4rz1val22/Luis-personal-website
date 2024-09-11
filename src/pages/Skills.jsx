@@ -1,3 +1,4 @@
+// The Skills Page
 const Skills = () => {
     return (
         <>

@@ -2,19 +2,22 @@ import Tv from "../components/TV/TV"
 import Printer from "../components/Printer/Printer.jsx"
 import Intercom from "../components/Intercom/Intercom.jsx"
 import './Pages.css';
+import { useEffect } from 'react'
 
+// The Home page.
 const Home = () => {
+
     return (
         <div>
             <Tv />
-            <div className="hozContainer heading bottom">
+            <div className="hoz-container heading bottom">
                 <div className='sideLines Blue' />
                 <div className='hiddenElement title'> ABOUT ME</div>
                 <div className='sideLines Reverse Blue' />
             </div>
-            <div className="imgSection">
-                <div className="Container">
-                    <div className="textBox left">
+            <div className="img-section">
+                <div className="container">
+                    <div className="text-box left">
                         <h2>Hello there!</h2> My name is <b>Luis Enrique Sarmiento</b>, a Computer Science student at Northeastern University, currently based in Boston, MA.
                         Originally from Venezuela and completing my studies in Panama, my unique journey has been fueled by a
                         passion for tech, problem-solving, and innovation.
@@ -24,9 +27,9 @@ const Home = () => {
                     </div>
                     <div className="box right" />
                 </div>
-                <div className="Container">
+                <div className="container">
                     <div className="box left" />
-                    <div className="textBox right">
+                    <div className="text-box right">
                         I'm dedicated to using my skills to create tangible, positive change. Whether it's through coding, leading or collaborating
                         with others, I'm determined to push the boundaries of innovation and create sustainable,
                         ethical solutions to the problems of today and tomorrow.
@@ -37,22 +40,20 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <div className="hozContainer heading">
+            <div className="hoz-container heading">
                 <div className='sideLines Left Pink' />
                 <div className='title'> DOCUMENTS</div>
                 <div className='sideLines Reverse Pink' />
             </div>
             <Printer />
 
-            <div className="hozContainer heading">
+            <div className="hoz-container heading">
                 <div className='sideLines yellow' />
                 <div className='title'> CONTACT ME</div>
                 <div className='sideLines Reverse yellow' />
             </div>
             <Intercom />
             <br />
-
-
         </div>
     );
 }

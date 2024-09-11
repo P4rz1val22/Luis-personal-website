@@ -6,7 +6,8 @@ import Skills from './pages/Skills';
 import Projects from './pages/Projects';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
-
+// The main application. Contains a router and routes leading to each of the pages
+// available. This is dictated by the Navbar componend.
 function App() {
   return (
     <Router>

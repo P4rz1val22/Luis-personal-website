@@ -1,12 +1,8 @@
 :root {
-  font-family: 'Futura Std', sans-serif;
+  font-family: 'Futura PT', sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -70,17 +66,17 @@ button:focus-visible {
 
 body {
   margin: 0;
-  font-family: 'Futura Std', sans-serif;
+  font-family: 'Futura PT', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: light-dark(#fff2e0, #07072c);
 }
 
-/* Apply the Futura Std font to specific elements */
 h3,
 h2,
 .title,
 b {
-  font-family: 'Futura Std', sans-serif;
+  font-family: 'Futura PT Medium', sans-serif;
   font-weight: 400;
   /* Adjust weight if available */
 }

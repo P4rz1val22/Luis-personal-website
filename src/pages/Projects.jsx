@@ -1,12 +1,10 @@
-import Tv from "../components/TV/TV"
+import Jukebox from "../components/Jukebox/Jukebox";
 
 const Projects = () => {
     return (
-        <>
-            <h1>
-                Projects
-            </h1>
-        </>
+        <div>
+            <Jukebox />
+        </div>
     );
 }
 

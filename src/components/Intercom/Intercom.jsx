@@ -2,12 +2,18 @@ import './Intercom.css';
 import React from "react";
 import { useState, useRef } from 'react';
 
+// The Intercom component, pointing users towards different ways 
+// they can reach me. (LinkeIn, a custom Form, GitHub, Email) [Home section]
 const Intercom = () => {
 
+    // The current index of method of contact.
     const [currentIndex, setCurrentIndex] = useState(0);
-    const audioRef = useRef(null); // Create a reference to the audio element
-    const audioRef2 = useRef(null); // Create a reference to the audio element
 
+    // Audio references for wheel spin and button click
+    const audioRef = useRef(null);
+    const audioRef2 = useRef(null);
+
+    // Links to contact pages.
     const links = [
         'https://github.com/P4rz1val22',
         'https://github.com/P4rz1val22',
@@ -15,16 +21,18 @@ const Intercom = () => {
         'https://www.linkedin.com/in/luis-enrique-sarmiento-971360291/f'
     ];
 
+    // The rotation of the wheel.
+    const [rotation, setRotation] = useState(0);
+
+    // function that handles the indexing of the contact method and audio playing.
     const handleClick = (amount) => {
         let nextIndex = currentIndex + amount;
-        console.log(links[currentIndex])
 
         if (nextIndex > links.length - 1) {
             nextIndex = 0;
         }
 
         if (nextIndex < 0) {
-            console.log("Underflow");
             nextIndex = links.length - 1;
         }
 
@@ -44,8 +52,7 @@ const Intercom = () => {
         setCurrentIndex(nextIndex);
     };
 
-    const [rotation, setRotation] = useState(0);
-
+    // Returns the Intercom component.
     return (
         <div className='intercom'>
             <div className='intercom-box'>

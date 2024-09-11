@@ -3,27 +3,31 @@ import React from "react";
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-function NavBarButton({ name, path }) {
+// A Navbar button that containing the given name and linking to the given path. [All sections]
+function NavbarButton({ name, path }) {
     return (
-        <Link to={path} className='navBarButton'>
+        <Link to={path} className='navbar-button'>
             {name}
         </Link>
     );
 }
 
-NavBarButton.propTypes = {
+NavbarButton.propTypes = {
     name: PropTypes.string.isRequired,
     path: PropTypes.string.isRequired,
 };
 
+// The Navbar component that links users to the different pages in the site.
 const Navbar = () => {
+
+    // returns the Navbar component
     return (
-        <div className='navBar'>
-            <NavBarButton name={'HOME'} path={'/'} />
-            <NavBarButton name={'WORK'} path={'/work'} />
+        <div className='navbar'>
+            <NavbarButton name={'HOME'} path={'/'} />
+            <NavbarButton name={'WORK'} path={'/work'} />
             <div className='circle' />
-            <NavBarButton name={'SKILLS'} path={'/skills'} />
-            <NavBarButton name={'PROJECTS'} path={'/projects'} />
+            <NavbarButton name={'SKILLS'} path={'/skills'} />
+            <NavbarButton name={'PROJECTS'} path={'/projects'} />
         </div>
     );
 }
