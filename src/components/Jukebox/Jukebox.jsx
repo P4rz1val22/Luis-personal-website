@@ -1,11 +1,11 @@
 import { react, useState } from 'react';
 import './Jukebox.css'
+import Projects from '../../pages/Projects';
 
 const Jukebox = () => {
 
     const [divStyle, setStyle] = useState({});
     const [divClicked, setClicked] = useState(false);
-
     const defaultStyle = {
     };
 
@@ -15,17 +15,35 @@ const Jukebox = () => {
         'L. of Rec #2'
     ];
 
-    const handleClick = () => {
-        const clickedStyle = {
-            transform: 'scaleY(0.2)',
-        };
-        if (!divClicked) {
-            setStyle(clickedStyle);
+    const handleClick = (number) => {
+
+        if (currentIndex == number) {
+            console.log("Same clicked")
+            const clickedStyle = {
+                marginTop: '50vw',
+            };
+            if (!divClicked) {
+                setTimeout(() => {
+                    setStyle(sideStyle);
+                }, 1000);
+                const sideStyle = {
+                    animation: 'rotation 2s infinite linear',
+                    marginTop: '50vw',
+                    marginLeft: '-60vw'
+                }
+                setStyle(clickedStyle);
+            }
+            else {
+                setTimeout(() => {
+                    setStyle(defaultStyle);
+                }, 1000);
+                setStyle(clickedStyle);
+
+            }
+            setClicked(!divClicked)
         }
-        else {
-            setStyle(defaultStyle);
-        }
-        setClicked(!divClicked)
+
+        setCurrentIndex(number);
     }
 
     // Current index constant
@@ -51,21 +69,21 @@ const Jukebox = () => {
         setCurrentIndex(nextIndex);
     };
 
-
-
     return (
         <div>
-            <div className='album-selector'>
-                <div className='swipe backwards' onClick={() => handleArrowClick(-1)} />
-                <div className='carousel'>
-                    <div id='1' className={`album ${(currentIndex == 0) ? 'center' : ''}`}></div>
-                    <div id='2' className={`album ${(currentIndex == 1) ? 'center' : ''}`}>{currentIndex}</div>
-                    <div id='3' className={`album ${(currentIndex == 2) ? 'center' : ''}`}></div>
+            <div className='project-selector'>
+                <div className='album-selector'>
+                    <div className='swipe backwards' onClick={() => handleArrowClick(-1)} />
+                    <div className='carousel'>
+                        <div onClick={() => handleClick(0)} className={`album ${(currentIndex == 0) ? 'center' : ''}`}></div>
+                        <div onClick={() => handleClick(1)} className={`album ${(currentIndex == 1) ? 'center' : ''}`}></div>
+                        <div onClick={() => handleClick(2)} className={`album ${(currentIndex == 2) ? 'center' : ''}`}></div>
+                    </div>
+                    <div className='swipe forwards' onClick={() => handleArrowClick(1)} />
                 </div>
-                <div className='swipe forwards' onClick={() => handleArrowClick(1)} />
-            </div>
-            <div className='disc-container'>
-                <div className='disc' onClick={() => handleClick()} style={divStyle} />
+                <div className='disc-container'>
+                    <div className='disc' onClick={() => handleClick()} style={divStyle} data-content={projects[currentIndex]}></div>
+                </div>
             </div>
         </div>
     );
