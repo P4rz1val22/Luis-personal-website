@@ -4,15 +4,22 @@ import Projects from '../../pages/Projects';
 
 const Jukebox = () => {
 
+    const isMobile = window.innerWidth <= 768;
+
     const [divStyle, setStyle] = useState({});
     const [divClicked, setClicked] = useState(false);
     const defaultStyle = {
     };
 
     const projects = [
-        'Resume',
-        'L. of Rec #1',
-        'L. of Rec #2'
+        'LiveNEU',
+        'Open-House',
+        'Personal Website'
+    ];
+
+    const projectDescs = ['In August 2024, I designed and developed a personal website using HTML, CSS, JavaScript, React, and Vite. The site serves as a hub for showcasing my personal projects and experiences. I also implemented interactive components with React and JavaScript, enhancing user engagement and creating a more dynamic browsing experience.',
+        'I trained and deployed a machine learning model on AWS SageMaker to predict the average market price of over 14,000 rental properties in Sydney. I utilized Pandas for data cleaning and built a Python algorithm to compare actual market values with predicted prices. The model was also used to evaluate rental agencies based on their pricing tendencies, helping users identify which agencies are better suited for renters or landlords.',
+        'In April 2024, I developed LiveNEU, a website aimed at improving Northeastern University’s housing information platform. Built with HTML, CSS, JavaScript, Supabase, React, and Vite, this platform features detailed housing application information. I also initiated the development of a database to track dorm information, offering students a more streamlined and informative resource for housing.'
     ];
 
     const handleClick = (number) => {
@@ -20,7 +27,7 @@ const Jukebox = () => {
         if (currentIndex == number) {
             console.log("Same clicked")
             const clickedStyle = {
-                marginTop: '50vw',
+                marginTop: '40vw',
             };
             if (!divClicked) {
                 setTimeout(() => {
@@ -28,8 +35,8 @@ const Jukebox = () => {
                 }, 1000);
                 const sideStyle = {
                     animation: 'rotation 2s infinite linear',
-                    marginTop: '50vw',
-                    marginLeft: '-60vw'
+                    marginTop: '40vw',
+                    marginLeft: '-60vw',
                 }
                 setStyle(clickedStyle);
             }
@@ -42,15 +49,11 @@ const Jukebox = () => {
             }
             setClicked(!divClicked)
         }
-
         setCurrentIndex(number);
     }
 
     // Current index constant
     const [currentIndex, setCurrentIndex] = useState(1);
-
-    // Checks if the mouse is hovering over the button
-    const [isHoverEnabled, setIsHoverEnabled] = useState(true);
 
     // Handles the clicking of the selection (triangular) and
     // printing (circular) buttons
@@ -82,10 +85,18 @@ const Jukebox = () => {
                     <div className='swipe forwards' onClick={() => handleArrowClick(1)} />
                 </div>
                 <div className='disc-container'>
-                    <div className='disc' onClick={() => handleClick()} style={divStyle} data-content={projects[currentIndex]}></div>
+                    <div className='disc' onClick={() => handleClick(currentIndex)} style={divStyle} data-content={!isMobile ? projects[currentIndex] : ''}></div>
                 </div>
             </div>
-        </div>
+            <div className='hoz-container black'>
+                <div className='disc-holder' />
+                <div className={`project-text ${!divClicked ? 'transparent' : ''}`}>
+                    <h2>{projects[currentIndex]}</h2>
+                    {projectDescs[currentIndex]}
+                </div>
+            </div>
+            <div className='project-selector'></div>
+        </div >
     );
 }
 
