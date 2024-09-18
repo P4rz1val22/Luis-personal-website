@@ -72,10 +72,10 @@ const Intercom = () => {
             </div>
             <div className='wheel-wrapper'>
                 <div className='intercom-wheel' onClick={() => handleClick(1)} style={{ transform: `rotate(${rotation}deg)` }} >
-                    <img className='wheel-icon top-icon' src='./public/assets/Images/GitHub-Logo.png' />
-                    <img className='wheel-icon bottom-icon' src='./public/assets/Images/LinkedIn-Logo.png' />
-                    <img className='wheel-icon left-icon' src='./public/assets/Images/Mail-Icon.png' />
-                    <img className='wheel-icon right-icon' src='./public/assets/Images/Form-Icon.png' />
+                    <img className='wheel-icon top-icon' src='./assets/Images/GitHub-Logo.png' />
+                    <img className='wheel-icon bottom-icon' src='./assets/Images/LinkedIn-Logo.png' />
+                    <img className='wheel-icon left-icon' src='./assets/Images/Mail-Icon.png' />
+                    <img className='wheel-icon right-icon' src='./assets/Images/Form-Icon.png' />
                 </div>
                 <audio ref={audioRef2} src="./public/assets/Sounds/WheelSound.mov" />
             </div>
