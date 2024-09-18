@@ -172,7 +172,7 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    background-image: url("src/assets/Images/Mail-Icon.png");
+    background-image: url("./public/assets/Images/Mail-Icon.png");
     cursor: pointer;
 }
 
@@ -213,7 +213,7 @@
     cursor: pointer;
     border-radius: 0.3vw;
     transform: scale(1.05);
-    background-image: url("../public/assets/Images/Record.png");
+    background-image: url("./public/assets/Images/Record.png");
     transition: .1s ease-in-out;
     margin-left: 1vw;
     margin-right: 1vw;

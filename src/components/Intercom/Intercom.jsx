@@ -68,16 +68,16 @@ const Intercom = () => {
                     <div style={{ height: '20vw' }} className='intercom-grate' />
                 </div>
                 <a onClick={() => handleClick(0)} href={links[currentIndex]} target="_blank" rel="noopener noreferrer" className='intercom-button' />
-                <audio ref={audioRef} src="../public/assets/Sounds/ClickSound.mov" />
+                <audio ref={audioRef} src="./public/assets/Sounds/ClickSound.mov" />
             </div>
             <div className='wheel-wrapper'>
                 <div className='intercom-wheel' onClick={() => handleClick(1)} style={{ transform: `rotate(${rotation}deg)` }} >
-                    <img className='wheel-icon top-icon' src='../public/assets/Images/GitHub-Logo.png' />
-                    <img className='wheel-icon bottom-icon' src='../public/assets/Images/LinkedIn-Logo.png' />
-                    <img className='wheel-icon left-icon' src='../public/assets/Images/Mail-Icon.png' />
-                    <img className='wheel-icon right-icon' src='../public/assets/Images/Form-Icon.png' />
+                    <img className='wheel-icon top-icon' src='./public/assets/Images/GitHub-Logo.png' />
+                    <img className='wheel-icon bottom-icon' src='./public/assets/Images/LinkedIn-Logo.png' />
+                    <img className='wheel-icon left-icon' src='./public/assets/Images/Mail-Icon.png' />
+                    <img className='wheel-icon right-icon' src='./public/assets/Images/Form-Icon.png' />
                 </div>
-                <audio ref={audioRef2} src="../public/assets/Sounds/WheelSound.mov" />
+                <audio ref={audioRef2} src="./public/assets/Sounds/WheelSound.mov" />
             </div>
             <div className='click-me-arrow'></div>
             <div className='click-me-title'>Click!</div>

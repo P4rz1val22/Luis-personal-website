@@ -19,9 +19,9 @@ const Printer = () => {
     ];
 
     const links = [
-        '../public/assets/PDFs/Resume.pdf',
-        '../public/assets/PDFs/LOR1.pdf',
-        '../public/assets/PDFs/LOR2.pdf',
+        './public/assets/PDFs/Resume.pdf',
+        './public/assets/PDFs/LOR1.pdf',
+        './public/assets/PDFs/LOR2.pdf',
     ];
 
     // Current index constant
@@ -66,7 +66,7 @@ const Printer = () => {
     // Handles the hovering over the sheet of paper coming out of the printer.
     const handleMouseEnter = () => {
         if (canPlay) {
-            const audio = new Audio('../public/assets/Sounds/Printer.mov');
+            const audio = new Audio('./public/assets/Sounds/Printer.mov');
             audio.volume = 0.6;
             audio.play();
 
@@ -96,7 +96,7 @@ const Printer = () => {
 
                 </div>
                 <a onClick={() => handleClick(0)} href={links[currentIndex]} target="_blank" rel="noopener noreferrer" className='print-button' />
-                <audio ref={audioRef} src="../public/assets/Sounds/ClickSound.mov" />
+                <audio ref={audioRef} src="./public/assets/Sounds/ClickSound.mov" />
             </div>
             <div className='printerScreen' >
                 <div className='typed-text'>
