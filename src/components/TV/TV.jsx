@@ -36,8 +36,8 @@ const Tv = () => {
         }, 100);
 
         if (canPlay) {
-            const audio = new Audio('./public/assets/Sounds/StaticSound.mov');
-            const audio2 = new Audio('./public/assets/Sounds/ClickSound.mov');
+            const audio = new Audio('./assets/Sounds/StaticSound.mov');
+            const audio2 = new Audio('./assets/Sounds/ClickSound.mov');
             audio.volume = 0.6;
             audio2.volume = 0.6;
             audio.play();
