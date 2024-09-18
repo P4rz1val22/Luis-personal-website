@@ -171,7 +171,7 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    background-image: url("./public/assets/Images/Mail-Icon.png");
+    background-image: url("../public/assets/Images/Mail-Icon.png");
     cursor: pointer;
 }
 
