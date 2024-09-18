@@ -1,6 +1,5 @@
 import { react, useState } from 'react';
 import './Jukebox.css'
-import Projects from '../../pages/Projects';
 
 const Jukebox = () => {
 
@@ -28,6 +27,7 @@ const Jukebox = () => {
             console.log("Same clicked")
             const clickedStyle = {
                 marginTop: '40vw',
+                opacity: 1
             };
             if (!divClicked) {
                 setTimeout(() => {
@@ -37,6 +37,7 @@ const Jukebox = () => {
                     animation: 'rotation 2s infinite linear',
                     marginTop: '40vw',
                     marginLeft: '-60vw',
+                    opacity: 1
                 }
                 setStyle(clickedStyle);
             }

@@ -3,11 +3,12 @@ html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Futura PT Medium', sans-serif;
 }
 
 .title {
     font-size: 6vw;
-    font-family: futura, medium;
+    font-family: 'Futura PT Medium', sans-serif;
     color: light-dark(black, white);
 }
 
@@ -73,7 +74,8 @@ html {
 
 .text-box {
     font-size: 2vw;
-    font-family: 'Futura Std', sans-serif;
+    font-family: 'Futura PT Medium', sans-serif;
+    font-weight: 500;
     padding: 5vw;
     width: 100%;
     text-align: left;
@@ -81,7 +83,7 @@ html {
 }
 
 .text-box b {
-    font-weight: 600;
+    font-family: 'Futura PT Heavy', sans-serif;
 }
 
 .box {

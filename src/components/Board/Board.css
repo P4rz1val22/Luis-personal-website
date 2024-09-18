@@ -25,7 +25,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: futura;
+    font-family: 'Futura PT Medium', sans-serif;
     transition-delay: 1s;
 }
 

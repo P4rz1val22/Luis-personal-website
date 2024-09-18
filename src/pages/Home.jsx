@@ -2,7 +2,6 @@ import Tv from "../components/TV/TV"
 import Printer from "../components/Printer/Printer.jsx"
 import Intercom from "../components/Intercom/Intercom.jsx"
 import './Pages.css';
-import { useEffect } from 'react'
 
 // The Home page.
 const Home = () => {

@@ -162,6 +162,6 @@
 .click-me-title {
     transform: translate(-8vw, 0);
     font-size: 3vw;
-    font-family: futura, medium;
+    font-family: 'Futura PT Medium', sans-serif;
     color: black;
 }
