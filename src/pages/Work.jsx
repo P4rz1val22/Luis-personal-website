@@ -17,7 +17,7 @@ const Work = () => {
 
     // State to manage the temporary style change
     const [divStyle, setDivStyle] = useState({
-        fontFamily: 'Futura Medium, sans-serif',
+        fontFamily: 'Futura PT Medium, sans-serif',
         opacity: 0,
         marginTop: '3vw'
     });
@@ -28,7 +28,7 @@ const Work = () => {
     }, []);
 
     const clickedStyle = {
-        fontFamily: 'Futura Medium, sans-serif',
+        fontFamily: 'Futura PT Medium, sans-serif',
         height: '8vw',
         backgroundColor: '#fd8916',
         color: 'white'
