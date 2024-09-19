@@ -47,9 +47,9 @@ const Home = () => {
             <Printer />
 
             <div className="hoz-container heading">
-                <div className='sideLines yellow' />
+                <div className='sideLines Orange' />
                 <div className='title'> CONTACT ME</div>
-                <div className='sideLines Reverse yellow' />
+                <div className='sideLines Reverse Orange' />
             </div>
             <Intercom />
             <br />

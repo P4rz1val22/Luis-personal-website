@@ -1,5 +1,6 @@
 import { react, useState } from 'react';
 import './Jukebox.css'
+import Intercom from '../Intercom/Intercom';
 
 const Jukebox = () => {
 
@@ -26,7 +27,7 @@ const Jukebox = () => {
         if (currentIndex == number) {
             console.log("Same clicked")
             const clickedStyle = {
-                marginTop: '40vw',
+                marginTop: '55vw',
                 opacity: 1
             };
             if (!divClicked) {
@@ -35,7 +36,7 @@ const Jukebox = () => {
                 }, 1000);
                 const sideStyle = {
                     animation: 'rotation 2s infinite linear',
-                    marginTop: '40vw',
+                    marginTop: '55vw',
                     marginLeft: '-60vw',
                     opacity: 1
                 }
@@ -76,6 +77,12 @@ const Jukebox = () => {
     return (
         <div>
             <div className='project-selector'>
+                <div className='section'></div>
+                <div className="hoz-container heading">
+                    <div className='sideLines Orange' />
+                    <div className='title White'> PERSONAL <br /> PROJECTS</div>
+                    <div className='sideLines Reverse Orange' />
+                </div>
                 <div className='album-selector'>
                     <div className='swipe backwards' onClick={() => handleArrowClick(-1)} />
                     <div className='carousel'>
@@ -96,7 +103,13 @@ const Jukebox = () => {
                     {projectDescs[currentIndex]}
                 </div>
             </div>
-            <div className='project-selector'></div>
+            <div className='project-selector'><div className="hoz-container heading">
+                <div className='sideLines Orange' />
+                <div className='title White'> CONTACT ME</div>
+                <div className='sideLines Reverse Orange' />
+            </div><Intercom /></div>
+
+
         </div >
     );
 }

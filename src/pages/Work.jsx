@@ -1,6 +1,7 @@
 // The Work page.
 import Clock from "../components/Clock/Clock.jsx";
 import Board from "../components/Board/Board.jsx";
+import Intercom from "../components/Intercom/Intercom.jsx";
 import { React, useState, useEffect } from "react";
 
 const Work = () => {
@@ -36,7 +37,14 @@ const Work = () => {
     const defaultStyle = {};
 
     return (
-        <div>
+        <div className="section">
+            <div className="vert-container">
+                <div className="hoz-container heading">
+                    <div className='sideLines Orange' />
+                    <div className='title'> WORK <br /> EXPERIENCE</div>
+                    <div className='sideLines Reverse Orange' />
+                </div>
+            </div>
             <div className="vert-container">
                 <div style={divStyle} className='punch-clock-container' >
                     <div className='slot-col'>
@@ -44,7 +52,7 @@ const Work = () => {
                         <div className='slot' />
                         <div className='slot'>
                             <div className='card' style={cardNo === 0 ? clickedStyle : defaultStyle} onClick={() => handleClick(0)}>
-                                Work 1
+                                UNAIDS
                             </div>
                         </div>
                         <div className='slot' />
@@ -58,21 +66,28 @@ const Work = () => {
                         <div className='slot' />
                         <div className='slot'>
                             <div className='card' style={cardNo === 1 ? clickedStyle : defaultStyle} onClick={() => handleClick(1)}>
-                                Work 2
+                                Silice
                             </div>
                         </div>
                         <div className='slot' />
                         <div className='slot' />
                         <div className='slot'>
                             <div className='card' style={cardNo === 2 ? clickedStyle : defaultStyle} onClick={() => handleClick(2)}>
-                                Work 3
+                                Biskit Media
                             </div>
                         </div>
                         <div className='slot' />
                     </div>
                 </div>
                 <Board number={cardNo} />
+
+                <div className="hoz-container heading">
+                    <div className='sideLines Orange' />
+                    <div className='title'> CONTACT ME</div>
+                    <div className='sideLines Reverse Orange' />
+                </div>
             </div>
+            <Intercom />
         </div>
     );
 }

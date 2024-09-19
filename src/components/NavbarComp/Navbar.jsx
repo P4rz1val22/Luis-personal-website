@@ -12,6 +12,17 @@ function NavbarButton({ name, path }) {
     );
 }
 
+function Circle({ path }) {
+    return (
+        <Link to={path} className='circle'>
+        </Link>
+    );
+}
+
+Circle.propTypes = {
+    path: PropTypes.string.isRequired,
+};
+
 NavbarButton.propTypes = {
     name: PropTypes.string.isRequired,
     path: PropTypes.string.isRequired,
@@ -25,7 +36,7 @@ const Navbar = () => {
         <div className='navbar'>
             <NavbarButton name={'HOME'} path={'/'} />
             <NavbarButton name={'WORK'} path={'/work'} />
-            <div className='circle' />
+            <Circle path={'/'} />
             <NavbarButton name={'SKILLS'} path={'/skills'} />
             <NavbarButton name={'PROJECTS'} path={'/projects'} />
         </div>

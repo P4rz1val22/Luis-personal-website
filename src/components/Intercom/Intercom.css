@@ -5,10 +5,10 @@
     align-items: center;
     padding-left: 17vw;
     background: repeating-linear-gradient(-45deg,
-            #997025,
-            #997025 10px,
-            #7e5c1d 10px,
-            #7e5c1d 20px);
+            #c1541e,
+            #c1541e 10px,
+            #a34316 10px,
+            #a34316 20px);
     margin: 5vw;
     margin-top: 0;
     margin-bottom: 0;
@@ -153,10 +153,10 @@
 }
 
 .click-me-arrow {
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    border-right: 20px solid black;
-    transform: translate(-10vw, 0) scale(2);
+    border-top: 0.5vw solid transparent;
+    border-bottom: 0.5vw solid transparent;
+    border-right: 1vw solid black;
+    transform: translate(-9vw, 0) scale(2);
 }
 
 .click-me-title {

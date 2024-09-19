@@ -10,6 +10,7 @@ html {
     font-size: 6vw;
     font-family: 'Futura PT Medium', sans-serif;
     color: light-dark(black, white);
+    line-height: 5vw;
 }
 
 .sideLines {
@@ -56,8 +57,9 @@ html {
 
 .heading {
     align-items: center;
-    margin-top: 4vw;
-    margin-bottom: 4vw;
+    height: 10vw;
+    margin-top: 3vw;
+    margin-bottom: 3vw;
 }
 
 .img-section {
@@ -82,6 +84,10 @@ html {
     color: light-dark(black, white);
 }
 
+.White {
+    color: White;
+}
+
 .text-box b {
     font-family: 'Futura PT Heavy', sans-serif;
 }
@@ -91,6 +97,10 @@ html {
     aspect-ratio: 1 / 1;
     background-color: #E15121;
 
+}
+
+.Orange {
+    background-color: #E15121;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -183,4 +193,45 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.skill-section {
+    width: 80%;
+    grid-template-columns: auto auto auto;
+    display: inline-grid;
+    margin: 2vw;
+}
+
+.skill-section-mobile {
+    grid-template-columns: auto auto auto;
+}
+
+.skill-square {
+    display: flex;
+    height: 5vw;
+    background-color: light-dark(#ffb862, #132e86);
+    margin: 0.2vw;
+    transition-duration: 1s;
+    border-radius: 1vw;
+    font-size: 3vw;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    color: white;
+    line-height: 4vw;
+}
+
+.skill-mobile {
+    height: 10vw;
+    font-size: 5vw;
+}
+
+
+.skill-square:hover {
+    background-color: rgb(255, 104, 45);
+    transition-duration: .2s;
+    margin-top: -0.4vw;
+    margin-bottom: 0.8vw;
+    transform: scale(1.05);
+    z-index: 2;
 }

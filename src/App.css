@@ -9,6 +9,10 @@
   transition: filter 300ms;
 }
 
+.section {
+  margin-top: 3vw;
+}
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
