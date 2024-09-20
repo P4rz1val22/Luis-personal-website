@@ -6,11 +6,11 @@ const Tv = () => {
 
     // The available colors for the screen
     const gradients = [
-        'repeating-linear-gradient(-45deg, #40456B, #40456B 10px, #393d5d 10px, #393d5d 20px)',
-        'repeating-linear-gradient(-45deg, #FF5733, #FF5733 10px, #C70039 10px, #C70039 20px)',
-        'repeating-linear-gradient(-45deg, #28B463, #28B463 10px, #1D8348 10px, #1D8348 20px)',
-        'repeating-linear-gradient(-45deg, #1F618D, #1F618D 10px, #154360 10px, #154360 20px)',
-        'repeating-linear-gradient(-45deg, #8E44AD, #8E44AD 10px, #5B2C6F 10px, #5B2C6F 20px)',
+        'repeating-linear-gradient(-48deg, #40456B, #40456B 10px, #393d5d 10px, #393d5d 20px)',
+        'repeating-linear-gradient(-48deg, #FF5733, #FF5733 10px, #C70039 10px, #C70039 20px)',
+        'repeating-linear-gradient(-48deg, #28B463, #28B463 10px, #1D8348 10px, #1D8348 20px)',
+        'repeating-linear-gradient(-48deg, #1F618D, #1F618D 10px, #154360 10px, #154360 20px)',
+        'repeating-linear-gradient(-48deg, #8E44AD, #8E44AD 10px, #5B2C6F 10px, #5B2C6F 20px)',
     ];
 
     // integer background index to check which background is currently in use.
