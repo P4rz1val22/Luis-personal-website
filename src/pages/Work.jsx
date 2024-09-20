@@ -21,7 +21,7 @@ const Work = () => {
         opacity: 0,
         marginTop: '3vw'
     });
-
+    //
     useEffect(() => {
         const regDivStyle = {}
         setDivStyle({ regDivStyle });
