@@ -3,7 +3,7 @@ import Printer from "../components/Printer/Printer.jsx"
 import Intercom from "../components/Intercom/Intercom.jsx"
 import './Pages.css';
 
-// The Home page.
+// The Home page .
 const Home = () => {
 
     return (
