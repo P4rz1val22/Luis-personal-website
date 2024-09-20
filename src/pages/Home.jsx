@@ -40,9 +40,9 @@ const Home = () => {
                 </div>
             </div>
             <div className="hoz-container heading">
-                <div className='sideLines Left Pink' />
+                <div className='sideLines Left Orange' />
                 <div className='title'> DOCUMENTS</div>
-                <div className='sideLines Reverse Pink' />
+                <div className='sideLines Reverse Orange' />
             </div>
             <Printer />
 

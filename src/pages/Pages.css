@@ -3,12 +3,12 @@ html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Futura PT Medium', sans-serif;
+    font-family: Futura, sans-serif;
 }
 
 .title {
     font-size: 6vw;
-    font-family: 'Futura PT Medium', sans-serif;
+    font-family: Futura, sans-serif;
     color: light-dark(black, white);
     line-height: 5vw;
 }
@@ -24,7 +24,7 @@ html {
 }
 
 .Blue {
-    background-color: #40456B;
+    background-color: #043B64;
 }
 
 .Pink {
@@ -76,7 +76,7 @@ html {
 
 .text-box {
     font-size: 2vw;
-    font-family: 'Futura PT Medium', sans-serif;
+    font-family: Futura, sans-serif;
     font-weight: 500;
     padding: 5vw;
     width: 100%;
@@ -89,7 +89,7 @@ html {
 }
 
 .text-box b {
-    font-family: 'Futura PT Heavy', sans-serif;
+    font-family: Futura, sans-serif;
 }
 
 .box {
@@ -100,7 +100,7 @@ html {
 }
 
 .Orange {
-    background-color: #E15121;
+    background-color: #FE8916;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -219,6 +219,7 @@ html {
     align-items: center;
     color: white;
     line-height: 4vw;
+    user-select: none;
 }
 
 .skill-mobile {
@@ -228,10 +229,11 @@ html {
 
 
 .skill-square:hover {
-    background-color: rgb(255, 104, 45);
+    background-color: #FE8916;
     transition-duration: .2s;
     margin-top: -0.4vw;
     margin-bottom: 0.8vw;
     transform: scale(1.05);
     z-index: 2;
+    user-select: none;
 }
