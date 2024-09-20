@@ -31,7 +31,7 @@ const Work = () => {
         fontFamily: 'Futura, sans-serif',
         height: '8vw',
         backgroundColor: '#fd8916',
-        color: 'white'
+        color: 'white',
     };
 
     const defaultStyle = {};
