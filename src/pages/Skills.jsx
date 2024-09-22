@@ -1,11 +1,25 @@
 import Intercom from "../components/Intercom/Intercom";
+import { useState, useEffect } from 'react'
+
 // The Skills Page
 const Skills = () => {
 
     const isMobile = window.innerWidth <= 768;
 
+    // State to manage the temporary style change
+    const [divStyle, setDivStyle] = useState({
+        fontFamily: 'Futura, sans-serif',
+        opacity: 0,
+        marginTop: '6vw'
+    });
+
+    useEffect(() => {
+        const regDivStyle = {}
+        setDivStyle({ regDivStyle });
+    }, []);
+
     return (
-        <div className="section">
+        <div style={divStyle} className="section">
             <div className="vert-container">
                 <div className="hoz-container heading">
                     <div className='sideLines Orange' />

@@ -19,9 +19,9 @@ const Work = () => {
     const [divStyle, setDivStyle] = useState({
         fontFamily: 'Futura, sans-serif',
         opacity: 0,
-        marginTop: '3vw'
+        marginTop: '6vw'
     });
-    //
+
     useEffect(() => {
         const regDivStyle = {}
         setDivStyle({ regDivStyle });
@@ -37,7 +37,7 @@ const Work = () => {
     const defaultStyle = {};
 
     return (
-        <div className="section">
+        <div style={divStyle} className='section'>
             <div className="vert-container">
                 <div className="hoz-container heading">
                     <div className='sideLines Orange' />
@@ -46,7 +46,7 @@ const Work = () => {
                 </div>
             </div>
             <div className="vert-container">
-                <div style={divStyle} className='punch-clock-container' >
+                <div className='punch-clock-container' >
                     <div className='slot-col'>
                         <div className='slot' />
                         <div className='slot' />
@@ -88,7 +88,7 @@ const Work = () => {
                 </div>
             </div>
             <Intercom />
-        </div>
+        </div >
     );
 }
 

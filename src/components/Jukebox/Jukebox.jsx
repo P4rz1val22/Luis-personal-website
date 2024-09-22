@@ -1,4 +1,4 @@
-import { react, useState } from 'react';
+import { react, useState, useEffect } from 'react';
 import './Jukebox.css'
 import Intercom from '../Intercom/Intercom';
 
@@ -34,7 +34,7 @@ const Jukebox = () => {
         if (currentIndex == number) {
             console.log("Same clicked")
             const clickedStyle = {
-                marginTop: '55.45vw',
+                marginTop: '36.45vw',
                 opacity: 1
             };
             if (!divClicked) {
@@ -43,7 +43,7 @@ const Jukebox = () => {
                 }, 1000);
                 const sideStyle = {
                     animation: 'rotation 2s infinite linear',
-                    marginTop: '55.45vw',
+                    marginTop: '36.45vw',
                     marginLeft: '-60vw',
                     opacity: 1
                 }
@@ -81,27 +81,41 @@ const Jukebox = () => {
         setCurrentIndex(nextIndex);
     };
 
+    // State to manage the temporary style change
+    const [transitionStyle, setDivStyle] = useState({
+        fontFamily: 'Futura, sans-serif',
+        opacity: 0,
+        marginTop: '6vw'
+    });
+
+    useEffect(() => {
+        const regDivStyle = {}
+        setDivStyle({ regDivStyle });
+    }, []);
+
     return (
         <div>
             <div className='project-selector'>
-                <div className='section'></div>
-                <div className="hoz-container heading">
-                    <div className='sideLines Orange' />
-                    <div className='title White'> PERSONAL <br /> PROJECTS</div>
-                    <div className='sideLines Reverse Orange' />
-                </div>
-                <div className='album-selector'>
-                    <div className='swipe backwards' onClick={() => handleArrowClick(-1)} />
-                    <div className='carousel'>
-                        <div onClick={() => handleClick(0)} className={`album ${(currentIndex == 0) ? 'center' : ''}`}>{projects[currentIndex]}</div>
-                        <div onClick={() => handleClick(1)} className={`album ${(currentIndex == 1) ? 'center' : ''}`}>{projects[currentIndex]}</div>
-                        <div onClick={() => handleClick(2)} className={`album ${(currentIndex == 2) ? 'center' : ''}`}>{projects[currentIndex]}</div>
+                <div style={transitionStyle} className='section'>
+                    <div className="hoz-container heading">
+                        <div className='sideLines Orange' />
+                        <div className='title White'> PERSONAL <br /> PROJECTS</div>
+                        <div className='sideLines Reverse Orange' />
                     </div>
-                    <div className='swipe forwards' onClick={() => handleArrowClick(1)} />
+                    <div className='album-selector'>
+                        <div className='swipe backwards' onClick={() => handleArrowClick(-1)} />
+                        <div className='carousel'>
+                            <div onClick={() => handleClick(0)} className={`album ${(currentIndex == 0) ? 'center' : ''}`}>{projects[currentIndex]}</div>
+                            <div onClick={() => handleClick(1)} className={`album ${(currentIndex == 1) ? 'center' : ''}`}>{projects[currentIndex]}</div>
+                            <div onClick={() => handleClick(2)} className={`album ${(currentIndex == 2) ? 'center' : ''}`}>{projects[currentIndex]}</div>
+                        </div>
+                        <div className='swipe forwards' onClick={() => handleArrowClick(1)} />
+                    </div>
+                    <div className='disc-container'>
+                        <div className='disc' onClick={() => handleClick(currentIndex)} style={divStyle} data-content={!isMobile ? projects[currentIndex] : ''}></div>
+                    </div>
                 </div>
-                <div className='disc-container'>
-                    <div className='disc' onClick={() => handleClick(currentIndex)} style={divStyle} data-content={!isMobile ? projects[currentIndex] : ''}></div>
-                </div>
+
             </div>
             <div className='hoz-container black'>
                 <div className='disc-holder' />

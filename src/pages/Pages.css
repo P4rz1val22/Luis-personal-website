@@ -245,6 +245,9 @@ html {
     font-size: 5vw;
 }
 
+.home {
+    margin-top: 0vw;
+}
 
 .skill-square:hover {
     background-color: #FE8916;

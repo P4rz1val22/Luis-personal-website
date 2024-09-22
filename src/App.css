@@ -11,6 +11,8 @@
 
 .section {
   margin-top: 3vw;
+  width: 100%;
+  transition: .5s ease-in-out;
 }
 
 .logo:hover {
