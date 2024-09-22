@@ -78,7 +78,7 @@ html {
     font-size: 2vw;
     font-family: Futura, sans-serif;
     font-weight: 500;
-    padding: 5vw;
+    padding: 2vw;
     width: 100%;
     text-align: left;
     color: light-dark(black, white);
@@ -93,14 +93,31 @@ html {
 }
 
 .box {
-    width: 100%;
+    width: 50vw;
+    height: 50vw;
+    border-radius: 2vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
     aspect-ratio: 1 / 1;
-    background-color: #E15121;
+    background-color: #FE8916;
+    object-fit: cover;
+    object-position: 100%;
+}
 
+.hide {
+    width: 0;
+    height: 0;
+    object-fit: cover;
+    background-image: none;
+    opacity: 0;
 }
 
 .Orange {
     background-color: #FE8916;
+}
+
+.big {
+    font-size: 3vw;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -186,6 +203,7 @@ html {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 }
 
 .vert-container {

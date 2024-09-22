@@ -6,6 +6,8 @@ import './Pages.css';
 // The Home page .
 const Home = () => {
 
+    const isMobile = window.innerWidth <= 768;
+
     return (
         <div>
             <Tv />
@@ -15,8 +17,8 @@ const Home = () => {
                 <div className='sideLines Reverse Blue' />
             </div>
             <div className="img-section">
-                <div className="container">
-                    <div className="text-box left">
+                <div className="hoz-container">
+                    <div className={`text-box left " ${isMobile ? 'big' : ''}`}>
                         <h2>Hello there!</h2> My name is <b>Luis Enrique Sarmiento</b>, a Computer Science student at Northeastern University, currently based in Boston, MA.
                         Originally from Venezuela and completing my studies in Panama, my unique journey has been fueled by a
                         passion for tech, problem-solving, and innovation.
@@ -24,17 +26,17 @@ const Home = () => {
                         Since I was young, I became entranced with the impact technology had in the world, and became fascinated with its ability
                         to bring forth social change and improve the lives of others.
                     </div>
-                    <div className="box right" />
+                    <img className={` ${!isMobile ? 'box left' : 'hide'}`} src='./assets/Images/IMG_1543.jpeg' />
                 </div>
-                <div className="container">
-                    <div className="box left" />
-                    <div className="text-box right">
+                <div className="hoz-container">
+                    <img className={` ${!isMobile ? 'box left' : 'hide'}`} src='./assets/Images/IMG_9476.jpeg' />
+                    <div className={`text-box left " ${isMobile ? 'big' : ''}`}>
                         I'm dedicated to using my skills to create tangible, positive change. Whether it's through coding, leading or collaborating
                         with others, I'm determined to push the boundaries of innovation and create sustainable,
                         ethical solutions to the problems of today and tomorrow.
                         <br /><br />
                         When I'm not buried in code, you might find me exploring the vibrant tech scene
-                        in Boston or brainstorming new ideas for my next project. I'm excited about the
+                        in Boston, travelling abroad or brainstorming new ideas for my next project. I'm excited about the
                         future and eager to see where my journey in tech will take me next.
                     </div>
                 </div>

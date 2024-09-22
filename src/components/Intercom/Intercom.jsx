@@ -15,7 +15,7 @@ const Intercom = () => {
 
     // Links to contact pages.
     const links = [
-        'https://github.com/P4rz1val22',
+        'https://forms.office.com/r/bgL0gvf9Yt',
         'https://github.com/P4rz1val22',
         'mailto:luis.sar.cor@gmail.com',
         'https://www.linkedin.com/in/luis-enrique-sarmiento-971360291/f'

@@ -8,7 +8,7 @@
     align-items: center;
     border-radius: 3vw;
     margin-top: 4vw;
-    box-shadow: 0 -3vw light-dark(#E05122, #b74336);
+    box-shadow: 0 1vw light-dark(#E05122, #b74336);
 }
 
 .printer-buttons {
