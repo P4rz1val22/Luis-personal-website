@@ -64,6 +64,7 @@
 }
 
 .screenButton {
+    transition: ease-in 0.1s;
     background-color: transparent;
     border: 1vw solid #E8E2C9;
     width: 8vw;
@@ -86,6 +87,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     box-shadow: 0 0.6vw 0 light-dark(#E15121, #26269d);
+    transition: ease-in 0.1s;
 }
 
 .screenButton:hover {

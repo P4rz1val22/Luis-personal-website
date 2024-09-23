@@ -105,7 +105,7 @@
     cursor: pointer;
     position: relative;
     z-index: 1;
-    transition: transform ease-in-out .3s;
+    transition: transform ease-out .5s;
     transform-origin: center;
 }
 
