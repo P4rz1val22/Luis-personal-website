@@ -34,7 +34,7 @@ const Jukebox = () => {
         if (currentIndex == number) {
             console.log("Same clicked")
             const clickedStyle = {
-                marginTop: '36.45vw',
+                marginTop: '36vw',
                 opacity: 1
             };
             if (!divClicked) {
@@ -43,7 +43,7 @@ const Jukebox = () => {
                 }, 1000);
                 const sideStyle = {
                     animation: 'rotation 2s infinite linear',
-                    marginTop: '36.45vw',
+                    marginTop: '36vw',
                     marginLeft: '-60vw',
                     opacity: 1
                 }
