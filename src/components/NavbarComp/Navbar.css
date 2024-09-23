@@ -9,6 +9,7 @@
     padding-top: 1vw;
     transition: .2s ease-in-out;
     cursor: pointer;
+    z-index: 3;
 }
 
 .navbar-button:hover {
@@ -36,7 +37,7 @@
     padding: -10%;
     transition: .2s ease-in-out;
     margin: -2vw;
-    z-index: 1;
+    z-index: 4;
     cursor: pointer;
 }
 
