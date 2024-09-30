@@ -86,8 +86,8 @@ const Work = () => {
                     <div className='title'> CONTACT ME</div>
                     <div className='sideLines Reverse Orange' />
                 </div>
+                <Intercom />
             </div>
-            <Intercom />
         </div >
     );
 }
