@@ -40,9 +40,9 @@ const Work = () => {
         <div style={divStyle} className='section'>
             <div className="vert-container">
                 <div className="hoz-container heading">
-                    <div className='sideLines Orange' />
+                    <div className='sideLines Blue' />
                     <div className='title'> WORK <br /> EXPERIENCE</div>
-                    <div className='sideLines Reverse Orange' />
+                    <div className='sideLines Reverse Blue' />
                 </div>
             </div>
             <div className="vert-container">

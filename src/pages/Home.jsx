@@ -26,10 +26,10 @@ const Home = () => {
                         Since I was young, I became entranced with the impact technology had in the world, and became fascinated with its ability
                         to bring forth social change and improve the lives of others.
                     </div>
-                    <img className={` ${!isMobile ? 'box left' : 'hide'}`} src='./assets/Images/IMG_1543.jpeg' />
+                    <img className={` ${!isMobile ? 'box left' : 'hide'}`} src='./assets/Images/IMG_1543.jpeg' loading="lazy" />
                 </div>
                 <div className="hoz-container">
-                    <img className={` ${!isMobile ? 'box left' : 'hide'}`} src='./assets/Images/IMG_9476.jpeg' />
+                    <img className={` ${!isMobile ? 'box left' : 'hide'}`} src='./assets/Images/IMG_9476.jpeg' loading="lazy" />
                     <div className={`text-box left " ${isMobile ? 'big' : ''}`}>
                         I'm dedicated to using my skills to create tangible, positive change. Whether it's through coding, leading or collaborating
                         with others, I'm determined to push the boundaries of innovation and create sustainable,

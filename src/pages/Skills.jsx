@@ -23,9 +23,9 @@ const Skills = () => {
             <div style={divStyle} className="section">
                 <div className="vert-container">
                     <div className="hoz-container heading">
-                        <div className='sideLines Orange' />
+                        <div className='sideLines Blue' />
                         <div className='title'> SKILLS </div>
-                        <div className='sideLines Reverse Orange' />
+                        <div className='sideLines Reverse Blue' />
                     </div>
                 </div>
                 <div className={`skill-section ${isMobile ? 'skill-section-mobile' : ''}`}>

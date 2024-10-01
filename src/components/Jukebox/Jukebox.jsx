@@ -98,9 +98,9 @@ const Jukebox = () => {
             <div className='project-selector'>
                 <div style={transitionStyle} className='section'>
                     <div className="hoz-container heading">
-                        <div className='sideLines Orange' />
+                        <div className='sideLines Blue' />
                         <div className='title White'> PERSONAL <br /> PROJECTS</div>
-                        <div className='sideLines Reverse Orange' />
+                        <div className='sideLines Reverse Blue' />
                     </div>
                     <div className='album-selector'>
                         <div className='swipe backwards' onClick={() => handleArrowClick(-1)} />
