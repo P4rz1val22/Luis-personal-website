@@ -15,13 +15,15 @@ const Printer = () => {
     const texts = [
         'Resume',
         'L. of Rec #1',
-        'L. of Rec #2'
+        'L. of Rec #2',
+        'L. of Rec # 3'
     ];
 
     const links = [
         './assets/PDFs/Resume.pdf',
         './assets/PDFs/LOR1.pdf',
         './assets/PDFs/LOR2.pdf',
+        './assets/PDFs/LOR3.pdf'
     ];
 
     // Current index constant
