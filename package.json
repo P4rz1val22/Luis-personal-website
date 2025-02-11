@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://p4rz1val22.github.io/luis-personal-website/",
+  "homepage": "https://luis-personal-website-if1ungbga-luis-sarmientos-projects.vercel.app/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
